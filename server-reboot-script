@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+echo "🔧 Updating system..."
+apt update && apt upgrade -y
+
+echo "🧹 Cleaning up..."
+apt autoremove -y
+
+echo "🔁 Rebooting server..."
+reboot
